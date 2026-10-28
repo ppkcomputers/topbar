@@ -82,3 +82,12 @@ You can then add `/dev/video0` as a Video Capture Device in OBS.
 - The front-camera tap coordinates (`500 1337`) are specific to the phone resolution used during setup. Change them in `cameraOpenProcess` if needed.
 - The bar only starts the camera/scrcpy sequence once per time it is opened.
 - Bluetooth auto-connect runs in the background when the bar is shown.
+
+## Scrcpy auto fix
+---------------------
+sudo modprobe -r v4l2loopback
+sudo modprobe v4l2loopback exclusive_caps=1 card_label="Android Cam"
+
+sudo usermod -aG video $USER
+killall scrcpy
+scrcpy --v4l2-sink=/dev/video0 --no-audio --no-control --no-window
