@@ -5,7 +5,7 @@ A custom top bar for **Quickshell** on Wayland (Hyprland / CachyOS / Arch).
 
 ## Features
 
-- **Date & Time** with South African public holidays
+- **Date & Time** 
 - **System Volume** and **Microphone Volume** sliders (PipeWire)
 - **Clipboard** preview (text + images) with hover preview and click-to-open
 - **Bluetooth** status indicator
